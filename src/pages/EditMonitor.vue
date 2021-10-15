@@ -1,5 +1,5 @@
 <template>
-    <transition name="slide-fade" appear>
+    <transition name="slide-fade"  appear>
         <div>
             <h1 class="mb-3">{{ pageName }}</h1>
             <form @submit.prevent="submit">
@@ -67,7 +67,7 @@
                             <div v-if="monitor.type === 'port' || monitor.type === 'ping' || monitor.type === 'dns' " class="my-3">
                                 <label for="hostname" class="form-label">{{ $t("Hostname") }}</label>
                                 <input id="hostname" v-model="monitor.hostname" type="text" class="form-control" :pattern="`${ipRegexPattern}|${hostnameRegexPattern}`" required>
-                            </div>
+                            </div>   
 
                             <!-- For TCP Port Type -->
                             <div v-if="monitor.type === 'port' " class="my-3">
