@@ -43,7 +43,7 @@ export default {
 
     methods: {
 
-        initSocketIO(bypass = false) {
+        initSocketIO(bypass = false)   {
             // No need to re-init
             if (this.socket.initedSocketIO) {
                 return;
